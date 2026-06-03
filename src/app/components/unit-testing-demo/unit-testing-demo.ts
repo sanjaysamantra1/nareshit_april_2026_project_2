@@ -30,10 +30,17 @@ export class UnitTestingDemo {
     return sum;
   }
 
-  cars = ['Tata','Honda','Maruti'];
-  addNewCar(newCar:string){
+  cars = ['Tata', 'Honda', 'Maruti'];
+  addNewCar(newCar: string) {
     this.cars.push(newCar);
   }
 
-
+  processData(data: any) {
+    console.log('Processing data:', data);
+    return data.length;
+  }
+  fetchData() {
+    const data = ['item1', 'item2', 'item3'];
+    return this.processData(data);
+  }
 }
