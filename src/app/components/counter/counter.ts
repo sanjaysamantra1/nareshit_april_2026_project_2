@@ -14,7 +14,10 @@ export class Counter {
   count$: Observable<number>;
 
   constructor(private store: Store) {
-    this.count$ = store.select((state: any) => state.countData); // Selector
+    this.count$ = store.select((state: any) => {
+      console.log(state);
+      return state.countData;
+    }); // Selector
     console.log(this.count$);
   }
   reset() {
