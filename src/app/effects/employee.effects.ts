@@ -10,9 +10,11 @@ import { EmployeeService } from '../services/employee-service';
 		loadEmployees$: any;
 		deleteEmployee$: any;
 		addEmployee$: any;
+
 		actions$ = inject(Actions);
 		employeeService = inject(EmployeeService);
-		constructor() {this.employeeService
+
+		constructor() {
         this.loadEmployees$ = createEffect(() => this.actions$.pipe(
             ofType(fetchEmployees),
             exhaustMap(() => this.employeeService.fetchAllEmployees()
