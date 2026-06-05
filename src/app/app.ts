@@ -2,13 +2,17 @@ import { Component, signal } from '@angular/core';
 import { UnitTestingDemo } from './components/unit-testing-demo/unit-testing-demo';
 import { Counter } from './components/counter/counter';
 import { TodoCrud } from './components/todo-crud/todo-crud';
+import { EmployeeList } from './components/employee-list/employee-list';
+import { EmployeeAdd } from './components/employee-add/employee-add';
 
 @Component({
   selector: 'app-root',
   imports: [
     // UnitTestingDemo,
     // Counter,
-    TodoCrud
+    // TodoCrud
+    EmployeeList,
+    EmployeeAdd
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',
